@@ -1,0 +1,36 @@
+.timer_active.active {
+    border: 1px solid white;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: float 2s infinite alternate ease-in-out;
+    padding: 4rem;
+  }
+  
+  @keyframes float {
+    from {
+      transform: translateY(0px);
+      box-shadow: 0 0 15px white;
+    }
+    to {
+      transform: translateY(10px);
+      box-shadow: 0 0 5px white;
+    }
+  }
+  
+  @media (max-width: 662px) {
+    .timer_active.active {
+      max-width: 380px;
+    }
+  }
+  
+  @media (max-width: 430px) {
+    .timer_active.active {
+      max-width: 300px;
+      border-radius: 0;
+      aspect-ratio: 1/2;
+    }
+  }
