@@ -15,7 +15,6 @@ Chronos
 - [Pré-requisitos](#pré-requisitos)
 - [Instalação](#instalação)
 - [Uso](#uso)
-- [Exemplos de Código](#exemplos-de-código)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Contribuição](#contribuição)
@@ -29,13 +28,14 @@ Este projeto foi desenvolvido utilizando linguagem typescript, framework Next.JS
 
 **Acesse o site**
 
-https://genetica-polaris.vercel.app/
+
 
 ## Começando <a name="começando"></a>
 
 ### Pré-requisitos <a name="pre-requisitos"></a>
 
 Antes de iniciar , certifique-se acerca da instalação:
+
 - Node.js v22.13.0 (versão utilizada no desenvolvimento do projeto → abril de 2025 )
 - npm ou yarn
 
@@ -44,7 +44,7 @@ Antes de iniciar , certifique-se acerca da instalação:
 Clone o repositório e instale as dependências:
 
 ```bash
-git clone https://github.com/Talisson-matos/genetica.git
+git clone https://github.com/Talisson-matos/Chronos.git
 cd seuprojeto
 npm install 
 ```
@@ -85,108 +85,99 @@ docker build -t seu_container .
 docker run -p 3000:3000 seu_container
 ```
 
-## Exemplo de código <a name="exemplos-de-código"></a>
 
-1️⃣ Exemplo de conexão com o banco de dados
 
-Se seu projeto usa MongoDB, você pode incluir um exemplo de como conectar ao banco:
+## Layout & Funcionalidades <a name="funcionalidades"></a>
 
-typescript
-import { MongoClient } from "mongodb";
+### Relógio Mundial
 
-const uri = process.env.MONGODB_URI || "mongodb://localhost:27017/meubanco";
-const client = new MongoClient(uri);
+• Mostra o horário , dia da semana e data do ano;
 
-async function connectDB() {
-    try {
-        await client.connect();
-        console.log("✅ Conectado ao banco de dados!");
-    } catch (error) {
-        console.error("Erro ao conectar ao banco:", error);
-    }
-}
+• Funciona em diferentes fuso horários;
 
-connectDB();
+• Contém mapa interativo para ajudar o usuário na sua busca.
 
-2️⃣ Exemplo de uma API REST simples
 
-Se seu projeto tem uma API, você pode incluir um exemplo de requisição:
 
-typescript
-import type { NextApiRequest, NextApiResponse } from "next";
+![Imagens da aba relógio](public/docs/aba_relogio.jpg)
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    res.status(200).json({ mensagem: "🚀 API funcionando!" });
-}
 
-3️⃣ Exemplo de uso de uma função utilitária
+### Cronômetro
 
-Caso seu projeto tenha funções de manipulação de dados, um exemplo seria:
+• Cronômetro com as funcionalidades de iniciar, parar, continuar, reiniciar e volta .
 
-typescript
-export function formatarData(data: Date): string {
-    return data.toISOString().split("T")[0]; // Retorna a data no formato YYYY-MM-DD
-}
+![Imagens da aba cronometro](public/docs/aba_cronometro2.jpg)
 
-console.log(formatarData(new Date())); // Exemplo de saída: "2025-04-15"
+### Temporizador
 
-4️⃣ Exemplo de uso da API
+• Temporizador de contagem regressiva com as funcionalidades de iniciar , parar , continuar, reiniciar e editar.
 
-Se seu projeto disponibiliza endpoints, mostre como chamá-los:
+![Imagens da aba temporizador](public/docs/aba_temporizador.jpg)
 
-typescript
-fetch("https://api.exemplo.com/dados")
-    .then(response => response.json())
-    .then(data => console.log("📊 Dados recebidos:", data))
-    .catch(error => console.error("❌ Erro ao buscar dados:", error))
+• Na parte de edição possibilita ao usuário definir o tempo, a música, ou até escolher um toque de seu computador.
 
-## Layout & Funcionalidades <a name="fucionalidades"></a>
+![Imagens da aba temporizador(edição)](public/docs/aba_temporizador2.jpg)
 
-### Tema claro e escuro
 
-• Contém alternância de temas claro e escuro;
+### Calculadora
 
-• Contém input para pesquisa de temas de interesse do usuário;
+• Calculadora simples contendo operações de soma , subtração , multiplicação, divisão, raiz quadrada, porcentagem e operação com casas decimais.
 
-• Contém aside interativo com sistema de âncoras para 
-navegação e indicação aonde o usuário esta na página.
+• Pode ser tanto usada  pelo teclado do desktop/mobile ou pelos botões interativos do layout.
 
-**Tema Claro**
+![Imagens da aba calculadora](public/docs/aba_calculadora.jpg)
 
-![Texto alternativo](public/layout1.jpg)
 
-**Tema Escuro**
+### Conversor de medidas
 
-![Texto alternativo](public/layout2.jpg)
+• Conversor contento operações de várias medidas, dentre elas:
 
-### Layout responsivo
+♦ moeda
 
-• Layout responsivo respondendo de mobile a desktops.
+♦ comprimento 
 
-![Texto alternativo](public/layout_responsivo1.jpg)
+♦ pressão
 
-![Texto alternativo](public/layout_responsivo2.jpg)
+♦ IMC
 
-![Texto alternativo](public/layout_responsivo3.jpg)
+♦ Temperatura
 
-### Video ilustrativo
+♦ Energia
+
+♦ Volume
+
+♦ Tempo
+
+♦ Área
+
+♦ Peso
+
+♦ Velocidade
+
+♦ Força
+
+![Imagens da aba conversor de medidas](public/docs/aba_conversor.jpg)
+
+#### Exemplo do conversor de IMC:
+
+![Imagens da aba conversor de medidas](public/docs/aba_conversor_modal.jpg)
 
 **• Para mais interesses você pode baixar por aqui este vídeo ilustrativo da aplicação ou então acessá-lo pelo You Tube no link abaixo**
 
 
-[![ You tube ](public/video_ilustrativo.mp4)](https://youtu.be/UtXMB5Cmk14)
+[![ You tube ](public/docs/chronos.mp4)](https://youtu.be/S7HvCfdf2Cg)
 
 **• ou se preferir acesse o site**
 
-https://genetica-polaris.vercel.app/
+
 
 ## Tecnologias utilizadas <a name="tecnologias-utilizadas"></a>
 
 - **Frontend:** Interface do usuário construída com React/Next.JS/Typescript.
 
-- **Backend:** API REST desenvolvida em Next.js API Routes.
+- **Backend:** Roteamento com App Router.
 
-- **Banco de Dados:** MongoDB utilizado para armazenamento de dados.
+- **Estilização:** Tailwind.
 
 - **Containers:** Docker utilizado para conteinerização.
 
@@ -205,7 +196,7 @@ funcionalidades.
 
 ###  Passos para contribuir
 
-1. **Fork** este repositório e clone para sua máquina local → https://github.com/Talisson-matos/genetica.git .
+1. **Fork** este repositório e clone para sua máquina local → https://github.com/Talisson-matos/Chronos.git .
 
 2. Crie uma nova **branch** para suas alterações: `git checkout -b minha-contribuicao`.
 
