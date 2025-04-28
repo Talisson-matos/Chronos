@@ -162,6 +162,17 @@ docker run -p 3000:3000 seu_container
 
 ![Imagens da aba conversor de medidas](public/docs/aba_conversor_modal.jpg)
 
+
+### Menu responsivo para diferentes tamanhos de telas
+
+![Imagens da aba conversor de medidas](public/docs/menu_responsivo.jpg)
+
+![Imagens da aba conversor de medidas](public/docs/menu_responsivo2.jpg)
+
+![Imagens da aba conversor de medidas](public/docs/menu_responsivo3.jpg)
+
+![Imagens da aba conversor de medidas](public/docs/menu_responsivo4.jpg)
+
 **• Para mais interesses você pode baixar por aqui este vídeo ilustrativo da aplicação ou então acessá-lo pelo You Tube no link abaixo**
 
 
