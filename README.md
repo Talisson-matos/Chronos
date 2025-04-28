@@ -28,7 +28,7 @@ Este projeto foi desenvolvido utilizando linguagem typescript, framework Next.JS
 
 **Acesse o site**
 
-
+https://chronos-clock.vercel.app/
 
 ## Começando <a name="começando"></a>
 
